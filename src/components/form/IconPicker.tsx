@@ -9,12 +9,12 @@ const icons = [
   UserIcons.COUCH,
   UserIcons.MOBILE,
   UserIcons.TICKET,
-  UserIcons.THEATER,
   UserIcons.SATURN,
   UserIcons.HEADPHONES,
   UserIcons.TV,
   UserIcons.GHOST,
   UserIcons.COFFEE,
+  UserIcons.FIRE,
 ];
 export const initialIcon = icons[0];
 
