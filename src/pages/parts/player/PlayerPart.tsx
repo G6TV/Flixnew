@@ -57,13 +57,13 @@ export function PlayerPart(props: PlayerPartProps) {
   // Fullscreen on rotation horizontal
   const onRotate = useCallback(() => {
     if (window.orientation === 90 || window.orientation === -90) {
-      if (!document.fullscreenElement) {
+      if (!document.fullscreenElement && status === playerStatus.PLAYING) {
         display?.toggleFullscreen();
       }
-    } else if (document.fullscreenElement) {
+    } else if (document.fullscreenElement && status === playerStatus.PLAYING) {
       display?.toggleFullscreen();
     }
-  }, [display]);
+  }, [display, status]);
   useEffect(() => {
     window.addEventListener("orientationchange", onRotate);
     return () => {
